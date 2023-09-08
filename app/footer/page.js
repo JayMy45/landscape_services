@@ -1,11 +1,13 @@
+import TickerComponent from "./ticker"
+
 export default function Footer() {
 
     return (
         <>
             <footer>
-                <div className="h-20 w-full border">
-                    <div className="mx-auto border h-full w-96">
-
+                <div className="h-10 w-full border">
+                    <div className="my-auto pt-2 bg-black">
+                        <TickerComponent />
                     </div>
                 </div>
                 <div className="footer flex h-48 border">
