@@ -5,8 +5,10 @@ export default function Footer() {
     return (
         <>
             <footer>
-                <div className="h-20 w-full border">
-                    <TickerComponent />
+                <div className="h-10 w-full border">
+                    <div className="my-auto pt-2 bg-black">
+                        <TickerComponent />
+                    </div>
                 </div>
                 <div className="footer flex h-48 border">
                     <div className="w-1/6 border">
