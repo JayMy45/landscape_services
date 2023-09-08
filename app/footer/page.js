@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer>
                 <div className="h-10 w-full border">
-                    <div className="my-auto pt-2 bg-black">
+                    <div className="bg-black">
                         <TickerComponent />
                     </div>
                 </div>
