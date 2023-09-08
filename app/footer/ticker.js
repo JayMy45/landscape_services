@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-function TickerComponent() {
+export default function TickerComponent() {
     const ref = useRef(null);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ function TickerComponent() {
         gsap.fromTo(
             ref.current,
             { x: 0 },
-            { x: -width / 2, duration: 40, repeat: -1, ease: 'linear' },
+            { x: -width / 2, duration: 46, repeat: -1, ease: 'linear' },
         );
     }, []);
 
@@ -28,5 +28,3 @@ function TickerComponent() {
         </div>
     );
 }
-
-export default TickerComponent;
