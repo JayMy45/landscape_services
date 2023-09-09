@@ -20,17 +20,40 @@ export default function Services() {
                 <div className="border m-10">
                     <h2 className="text-center">Services Provided</h2>
                 </div>
-                <div className="grid grid-col-4 gap-4">
-                    <figure className="flex flex-col w-56 h-32 border">
-                        <Image src='https://res.cloudinary.com/dp04hh5pz/image/upload/v1694227883/landscape_service/lawnmower_kgfm1i.png' alt="picture of service" height={35} width={35} />
-
-                        <div className="">
-                            <div>
-                                thickens
+                <div className="m-10">
+                    <div className="grid grid-cols-4 gap-4">
+                        <figure className="flex flex-col w-fit h-fit rounded-lg overflow-hidden shadow-xl mx-auto">
+                            <div className="w-fit">
+                                <Image
+                                    src='https://res.cloudinary.com/dp04hh5pz/image/upload/v1694227883/landscape_service/lawnmower_kgfm1i.png'
+                                    alt="picture of service"
+                                    height={200}
+                                    width={200}
+                                />
                             </div>
-                        </div>
-                    </figure>
-                </div >
+                            <div className="h-fit bg-slate-200">
+                                <div className="p-3">
+                                    <h2 className="text-center uppercase text-slate-700">Mowing</h2>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure className="flex flex-col w-fit h-fit rounded-lg overflow-hidden shadow-xl mx-auto">
+                            <div className="w-fit">
+                                <Image
+                                    src='https://res.cloudinary.com/dp04hh5pz/image/upload/v1694227883/landscape_service/lawnmower_kgfm1i.png'
+                                    alt="picture of service"
+                                    height={200}
+                                    width={200}
+                                />
+                            </div>
+                            <div className="h-fit bg-slate-200">
+                                <div className="p-3">
+                                    <h2 className="text-center uppercase text-slate-700">Mowing</h2>
+                                </div>
+                            </div>
+                        </figure>
+                    </div >
+                </div>
             </section >
         </>
     )
