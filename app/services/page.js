@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+
 export default function Services() {
     // Mowing
     // Trimming
@@ -22,18 +23,20 @@ export default function Services() {
                 </div>
                 <div className="m-10">
                     <div className="grid grid-cols-4 gap-4">
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden shadow-xl mx-auto">
-                            <div className="w-56 h-56 bg-green-700 bg-opacity-60">
-                                {/* <Image
-                                    src='https://res.cloudinary.com/dp04hh5pz/image/upload/v1694227883/landscape_service/lawnmower_kgfm1i.png'
+                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
+                            <div className="w-56 h-56  ">
+                                <Image
+                                    src='/RidingLawnmower.png'
+                                    className="ml-3"
                                     alt="picture of service"
-                                    height={200}
-                                    width={200}
-                                /> */}
-                            </div>
-                            <div className="h-fit bg-slate-200">
-                                <div className="p-3">
-                                    <h2 className="text-center uppercase text-slate-700">Mowing</h2>
+                                    height={75}
+                                    width={75}
+                                />
+                                <div className="ml-5">
+                                    <h2 className="text-left uppercase text-slate-200">Mowing</h2>
+                                </div>
+                                <div className="ml-7 text-sm text-slate-400">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
                             </div>
                         </figure>
