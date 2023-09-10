@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { serviceData } from "../data/serviceData"
 
 
 export default function Services() {
@@ -20,92 +21,28 @@ export default function Services() {
             <section className="h-full border bg-gray-400 p-10">
 
                 <div className="">
-                    <div className="grid grid-cols-4 gap-10">
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
-                            <div className="w-56 h-56  ">
-                                <Image
-                                    src='/RidingLawnmower.png'
-                                    className="ml-3"
-                                    alt="picture of service"
-                                    height={75}
-                                    width={75}
-                                />
-                                <div className="ml-5">
-                                    <h2 className="text-left uppercase text-slate-200">Mowing</h2>
-                                </div>
-                                <div className="ml-7 text-sm text-slate-900">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
-                            <div className="w-56 h-56  ">
-                                <Image
-                                    src='/WeedEater.icon.png'
-                                    className="ml-3"
-                                    alt="picture of service"
-                                    height={75}
-                                    width={75}
-                                />
-                                <div className="ml-5">
-                                    <h2 className="text-left uppercase text-slate-200">Trimming</h2>
-                                </div>
-                                <div className="ml-7 text-sm text-slate-900">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
-                            <div className="w-56 h-56  ">
-                                <Image
-                                    src='/aerator.icon.png'
-                                    className="ml-3"
-                                    alt="picture of service"
-                                    height={75}
-                                    width={75}
-                                />
-                                <div className="ml-5">
-                                    <h2 className="text-left uppercase text-slate-200">Aeration</h2>
-                                </div>
-                                <div className="ml-7 text-sm text-slate-900">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
-                            <div className="w-56 h-56  ">
-                                <Image
-                                    src='/seedSower.png'
-                                    className="ml-3"
-                                    alt="picture of service"
-                                    height={75}
-                                    width={75}
-                                />
-                                <div className="ml-5">
-                                    <h2 className="text-left uppercase text-slate-200">Seed Sowing</h2>
-                                </div>
-                                <div className="ml-7 text-sm text-slate-900">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5">
-                            <div className="w-56 h-56  ">
-                                <Image
-                                    src='/seedSower.png'
-                                    className="ml-3"
-                                    alt="picture of service"
-                                    height={75}
-                                    width={75}
-                                />
-                                <div className="ml-5">
-                                    <h2 className="text-left uppercase text-slate-200">Seed Sowing</h2>
-                                </div>
-                                <div className="ml-7 text-sm text-slate-900">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                            </div>
-                        </figure>
+                    <div className="grid grid-cols-4 gap-10 w-fit mx-auto">
+                        {
+                            serviceData.map(({ id, name, description, image }) => {
+                                return <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5" key={`service--${id}`}>
+                                    <div className="w-56 h-fit">
+                                        <Image
+                                            src={`${image}`}
+                                            className="ml-3"
+                                            alt="picture of service"
+                                            height={75}
+                                            width={75}
+                                        />
+                                        <div className="ml-5 mt-1 mb-1 h-5">
+                                            <h2 className="text-left text-xs font-bold uppercase text-slate-200">{name}</h2>
+                                        </div>
+                                        <div className="ml-7 text-sm text-slate-900 h-36">
+                                            <p>{description}</p>
+                                        </div>
+                                    </div>
+                                </figure>
+                            })
+                        }
 
                     </div >
                 </div>
