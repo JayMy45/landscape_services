@@ -22,14 +22,14 @@ export default function Services() {
                 </div>
                 <div className="m-10">
                     <div className="grid grid-cols-4 gap-4">
-                        <figure className="flex flex-col w-fit h-fit rounded-lg overflow-hidden shadow-xl mx-auto">
-                            <div className="w-fit">
-                                <Image
+                        <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden shadow-xl mx-auto">
+                            <div className="w-56 h-56 bg-green-700 bg-opacity-60">
+                                {/* <Image
                                     src='https://res.cloudinary.com/dp04hh5pz/image/upload/v1694227883/landscape_service/lawnmower_kgfm1i.png'
                                     alt="picture of service"
                                     height={200}
                                     width={200}
-                                />
+                                /> */}
                             </div>
                             <div className="h-fit bg-slate-200">
                                 <div className="p-3">
