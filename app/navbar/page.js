@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
 
     return (
@@ -7,9 +9,15 @@ export default function Navbar() {
 
                     <div className="w-1/3 border flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
-                            <li className="hover:border-b p-1">Home</li>
-                            <li className="hover:border-b p-1">Contact Us</li>
-                            <li className="hover:border-b p-1">Services</li>
+                            <Link href="/">
+                                <li className="hover:border-b p-1">Home</li>
+                            </Link>
+                            <Link href="contact">
+                                <li className="hover:border-b p-1">Contact Us</li>
+                            </Link>
+                            <Link href="services">
+                                <li className="hover:border-b p-1">Services</li>
+                            </Link>
                         </ul>
                     </div>
 
