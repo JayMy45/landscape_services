@@ -35,8 +35,8 @@ export default function HoustonBrand() {
                         className="items-center hidden md:block"
                         src={imageSrc}
                         alt="Picture of Dog"
-                        width={25}
-                        height={25}
+                        width={20}
+                        height={20}
                         priority={true}
                     />
                 </Link>
