@@ -11,6 +11,9 @@ export default function Contact() {
                         </div>
 
                         <div className="grid grid-col-1 gap-7">
+                            <div className="mx-auto">
+                                <h2 className="text-xl text-slate-100">Get in Touch</h2>
+                            </div>
                             {/* Name */}
                             <div className="p-1 border border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input

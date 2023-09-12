@@ -6,6 +6,7 @@ export default function Footer() {
     return (
         <>
             <footer>
+                {/* ticker div */}
                 <div className="h-10 w-full">
                     <div className="bg-black">
                         <TickerComponent />
