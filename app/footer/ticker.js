@@ -21,7 +21,7 @@ export default function TickerComponent() {
             overflow: 'hidden',
             whiteSpace: 'nowrap',
             backgroundImage: "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/computeBackground.png')",
-            backgroundSize: "200px 200px",
+            backgroundSize: "300px 300px",
             backgroundPosition: "center",
             backgroundRepeat: "repeat"
         }} className='my-auto p-1'>
