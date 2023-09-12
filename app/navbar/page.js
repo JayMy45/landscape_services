@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Hamburger from "../hamburger";
 
 export default function Navbar() {
 
     return (
         <>
-            <nav>
+            <nav className="hidden md:block">
                 <div className="navbar flex h-32 border">
-
                     <div className="w-1/3 border flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
                             <Link href="/">
@@ -32,6 +32,10 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
+            <nav className="flex">
+                <Hamburger />
+            </nav>
+
         </>
     )
 }
