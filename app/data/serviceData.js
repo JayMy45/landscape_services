@@ -15,7 +15,7 @@ export const serviceData = [
         id: 3,
         name: "Aeration",
         description: "Enhance your lawn's health with our aeration service, encouraging deeper root growth and improved water absorption for a lush, vibrant green lawn.",
-        image: "/aerator.icon.png"
+        image: "/aerator.png"
     },
     {
         id: 4,
