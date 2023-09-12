@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <>
             <footer>
-                <div className="h-10 w-full border">
+                <div className="h-10 w-full">
                     <div className="bg-black">
                         <TickerComponent />
                     </div>
