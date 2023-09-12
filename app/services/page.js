@@ -33,9 +33,9 @@ export default function Services() {
                                             width={75}
                                         />
                                         <div className="ml-5 mt-1 mb-1 h-5">
-                                            <h2 className="text-left text-lg md:text-xs font-bold uppercase text-slate-200">{name}</h2>
+                                            <h2 className="text-left text-lg md:text-xs font-bold uppercase text-slate-100">{name}</h2>
                                         </div>
-                                        <div className="hidden md:block ml-7 text-sm text-slate-900 h-36">
+                                        <div className="hidden md:block ml-7 text-sm text-slate-950 h-36">
                                             <p>{description}</p>
                                         </div>
                                     </div>
