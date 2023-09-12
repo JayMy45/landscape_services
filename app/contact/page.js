@@ -1,3 +1,5 @@
+import { serviceData } from "../data/serviceData";
+
 export default function Contact() {
 
 
@@ -65,6 +67,25 @@ export default function Contact() {
                                     maxLength={500}
                                 />
                             </div>
+                            <div className="mx-auto hidden md:block">
+                                <h2>Add On Services</h2>
+                            </div>
+                            <section className="mx-auto pl-16 hidden md:block">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    {serviceData.map(({ id, name }) => (
+                                        name === "Mowing" || name === "Trimming"
+                                            ? <div key={id} className=""> {/* Adding a key prop using the id */}
+                                                <input type="checkbox" id={id} name={name} value={id} checked />
+                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
+                                            </div>
+                                            : <div key={id} className=""> {/* Adding a key prop using the id */}
+                                                <input type="checkbox" id={id} name={name} value={id} />
+                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
+                                            </div>
+                                    ))}
+                                </div>
+                            </section>
+
                             <div className="flex justify-center">
                                 <button
                                     // disabled={loading}
