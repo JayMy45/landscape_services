@@ -23,14 +23,14 @@ export default function Services() {
                     <div className="w-full border-b mb-10 p-2">
                         <h2 className="uppercase font-bold text-2xl">Services</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4 lg:gap-10 w-fit mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-4 lg:gap-10 w-fit mx-auto">
                         {
                             serviceData.map(({ id, name, description, image }) => {
-                                return <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5" key={`service--${id}`}>
-                                    <div className="w-56 h-32 md:h-fit">
+                                return <figure className="flex flex-col w-fit h-fit rounded-sm overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-5 pb-5 md:pb-0" key={`service--${id}`}>
+                                    <div className="w-44 md:w-56 h-36 md:h-fit">
                                         <Image
                                             src={`${image}`}
-                                            className="hidden md:block ml-3"
+                                            className="ml-3 mt-2"
                                             alt="picture of service"
                                             height={75}
                                             width={75}

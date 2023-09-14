@@ -4,7 +4,7 @@ export default function AreaPage() {
     return (
         <>
             <section className="h-full" id="service_area">
-                <div className="h-96 bg-slate-200" style={{
+                <div className="h-2/3 bg-slate-200" style={{
                     backgroundImage:
                         "linear-gradient(rgba(3,1,0.2,0.2),rgba(3,1,0.2,0.2)), url('/SouthCarolina.png')",
                     backgroundSize: "200px, 200px",
@@ -13,7 +13,7 @@ export default function AreaPage() {
                     <div>
                         <h2 className="text-center text-4xl text-black font-bold bg-slate-400 bg-opacity-95 p-4">Service Area</h2>
                     </div>
-                    <div className="grid grid-cols-3 gap-5 p-5">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5 p-5 md:p-10">
                         {
                             ServiceArea.map((area) => {
                                 return (

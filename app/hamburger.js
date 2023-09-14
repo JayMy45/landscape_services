@@ -88,6 +88,13 @@ export default function Hamburger() {
                                 Services
                             </li>
                         </Link>
+                        <Link href="area">
+                            <li
+                                onClick={() => setNavbarOpen(false)}
+                                className="py-4 cursor-pointer text-slate-200">
+                                Areas
+                            </li>
+                        </Link>
                         <Link href="contact">
                             <li
                                 onClick={() => setNavbarOpen(false)
