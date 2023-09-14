@@ -8,16 +8,16 @@ export default function Contact() {
             <section className="h-full p-10">
                 <form>
                     <div className="">
-                        <div className="w-full border-b mb-10 p-2">
+                        <div className="w-full border-b border-black dark:border-slate-100 mb-10 p-2">
                             <h2 className="uppercase font-bold text-2xl">Contact Us</h2>
                         </div>
 
                         <div className="grid grid-col-1 gap-7">
                             <div className="mx-auto">
-                                <h2 className="text-xl text-slate-100">Get in Touch</h2>
+                                <h2 className="text-xl dark:text-slate-100">Get in Touch</h2>
                             </div>
                             {/* Name */}
-                            <div className="p-1 border border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='name'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -30,7 +30,7 @@ export default function Contact() {
                             </div>
 
                             {/* Phone */}
-                            <div className="p-1 border border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='phone'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -42,7 +42,7 @@ export default function Contact() {
                             </div>
 
                             {/* Email */}
-                            <div className="p-1 border border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='email'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -56,7 +56,7 @@ export default function Contact() {
                             </div>
 
                             {/* Message */}
-                            <div className="p-1 mb-5 md:mb-0 border border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 mb-5 md:mb-0 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <textarea
                                     id="message"
                                     className="text-stone-100 w-full p-3 bg-transparent"
