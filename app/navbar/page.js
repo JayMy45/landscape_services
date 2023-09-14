@@ -26,6 +26,9 @@ export default function Navbar() {
 
                     <div className="w-1/3 border flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
+                            <Link href="area">
+                                <li className="hover:border-b p-1">Areas</li>
+                            </Link>
                             <li className="hover:border-b p-1">About Us</li>
                             <li className="hover:border-b p-1">Elephant Ears</li>
                         </ul>

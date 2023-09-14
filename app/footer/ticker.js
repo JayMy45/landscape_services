@@ -29,7 +29,7 @@ export default function TickerComponent() {
                 <div style={{ paddingRight: '0px' }} className='text-yellow-300 dark:text-blue-300'>
                     &bull; The starting price for mowing/trimming is $85 (no matter the lot size) &bull; Any extra services Charges will be applied &bull; We accept Cash, Cashapp, Visa Debit/Credit Cards &bull; Late charges will apply when not paid immediately after service &bull; Deposits are required before service for new potential clients
                 </div>
-                <div>
+                <div className='text-yellow-300 dark:text-blue-300'>
                     &bull; The starting price for mowing/trimming is $85 (no matter the lot size) &bull; Any extra services Charges will be applied &bull; We accept Cash, Cashapp, Visa Debit/Credit Cards &bull; Late charges will apply when not paid immediately after service &bull; Deposits are required before service for new potential clients
                 </div>
             </div>
