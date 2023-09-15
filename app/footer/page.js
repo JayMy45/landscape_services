@@ -8,7 +8,7 @@ export default function Footer() {
             <footer>
                 {/* ticker div */}
                 <div className="h-10 w-full">
-                    <div className="bg-black">
+                    <div className="bg-transparent dark:bg-black">
                         <TickerComponent />
                     </div>
                 </div>
