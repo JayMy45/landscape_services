@@ -5,7 +5,7 @@ export default function Contact() {
 
     return (
         <>
-            <section className="h-full p-10">
+            <section className="h-full md:px-10 md:pt-10">
                 <form>
                     <div className="">
                         <div className="w-full border-b border-black dark:border-slate-100 mb-10 p-2">
@@ -17,7 +17,7 @@ export default function Contact() {
                                 <h2 className="text-xl dark:text-slate-100">Get in Touch</h2>
                             </div>
                             {/* Name */}
-                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='name'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -30,7 +30,7 @@ export default function Contact() {
                             </div>
 
                             {/* Phone */}
-                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='phone'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -42,7 +42,7 @@ export default function Contact() {
                             </div>
 
                             {/* Email */}
-                            <div className="p-1 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='email'
                                     className="text-stone-100 p-3 w-full bg-transparent"
@@ -56,7 +56,7 @@ export default function Contact() {
                             </div>
 
                             {/* Message */}
-                            <div className="p-1 mb-5 md:mb-0 border  border-slate-800 dark:border-slate-400 rounded-sm w-11/12 md:w-2/4 mx-auto">
+                            <div className="p-1 mb-5 md:mb-0 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <textarea
                                     id="message"
                                     className="text-stone-100 w-full p-3 bg-transparent"
@@ -86,10 +86,10 @@ export default function Contact() {
                                 </div>
                             </section>
 
-                            <div className="flex justify-center">
+                            <div className="flex justify-center mb-7 md:mt-7">
                                 <button
                                     // disabled={loading}
-                                    className="bg-slate-700 rounded-sm py-2 px-3 shadow-2xl w-fit">
+                                    className="bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit">
                                     <h2 className="uppercase text-slate-200 text-lg font-bold">Submit</h2>
                                 </button>
                             </div>
