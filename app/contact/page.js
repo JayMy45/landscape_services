@@ -1,17 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { serviceData } from "../data/serviceData";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
 
+    const [resetCount, setResetCount] = useState(0);
 
     // loading state for submit button
     const [loading, setLoading] = useState(false);
+
+    // checkbox state to track which services are selected
+    const [checkedOptions, setCheckedOptions] = useState(new Set())
+
+    // set initial state of checkbox to include Mowing and Trimming
+    useEffect(() => {
+        const initialSet = new Set();
+        // for each service, if name is Mowing or Trimming, add id to initialSet
+        serviceData.forEach(({ id, name }) => {
+            if (name === "Mowing" || name === "Trimming") {
+                initialSet.add(id);
+            }
+        });
+
+        setCheckedOptions(initialSet);
+    }, [resetCount]);
+
 
 
     // notify functions to display toast messages
@@ -32,7 +49,9 @@ export default function Contact() {
             email: event.target.email.value,
             phone: event.target.phone.value,
             message: event.target.message.value,
+            services: Array.from(checkedOptions),
         };
+
         console.log(data);
         const response = await fetch('/api/contact', {
             method: 'POST',
@@ -45,10 +64,11 @@ export default function Contact() {
             console.log('response worked');
 
             // reset form
-            event.target.name.value = '';
-            event.target.email.value = '';
-            event.target.phone.value = '';
-            event.target.message.value = '';
+            event.target.reset();
+            setCheckedOptions(new Set());
+
+            // After successful submission and form reset
+            setResetCount(prevCount => prevCount + 1);
 
             // display toast message when email is sent successfully
             notifySuccess();
@@ -129,21 +149,32 @@ export default function Contact() {
                             <div className="mx-auto hidden md:block">
                                 <h2>Add On Services</h2>
                             </div>
-                            {/* <section className="mx-auto pl-16 hidden md:block">
+                            <section className="mx-auto pl-16 hidden md:block">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {serviceData.map(({ id, name }) => (
-                                        name === "Mowing" || name === "Trimming"
-                                            ? <div key={id} className="">
-                                                <input type="checkbox" id={id} name={name} value={id} checked />
-                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
-                                            </div>
-                                            : <div key={id} className="">
-                                                <input type="checkbox" id={id} name={name} value={id} />
-                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
-                                            </div>
+                                        <div key={id} className="">
+                                            <input
+                                                onChange={(e) => {
+                                                    const copy = new Set(checkedOptions);
+                                                    if (copy.has(id)) {
+                                                        copy.delete(id);
+                                                    } else {
+                                                        copy.add(id);
+                                                    }
+                                                    setCheckedOptions(copy);
+                                                }}
+                                                type="checkbox"
+                                                id={id}
+                                                name={name}
+                                                value={id}
+                                                checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
+                                            />
+                                            <label htmlFor={id} className="text-xs ml-1" >{name}</label>
+                                        </div>
+
                                     ))}
                                 </div>
-                            </section> */}
+                            </section>
 
                             <div className="flex justify-center mb-7 md:mt-7">
                                 <button
@@ -156,6 +187,13 @@ export default function Contact() {
                     </div>
                 </form>
             </section >
+            {/* toast container */}
+            <div className='z-11'>
+                <ToastContainer
+                    position='top-center'
+                    autoClose={2000}
+                />
+            </div>
         </>
     )
 }
