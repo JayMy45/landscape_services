@@ -1,12 +1,14 @@
 // load environment variables from .env file
 require('dotenv').config();
 
+import { serviceData } from "@/app/data/serviceData";
 import nodemailer from "nodemailer";
 
 
 
+
 export default async function ContactAPI(req, res) {
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, message, services } = req.body;
 
     // check if all fields are provided
     if (!name || !email || !phone || !message) {
@@ -34,6 +36,15 @@ export default async function ContactAPI(req, res) {
 
     // try to send email (see nodemailer docs for more info)
     try {
+        // Map the service IDs to their names
+        const serviceNames = services.map(id => {
+            const service = serviceData.find(service => service.id === id);
+            return service ? service.name : undefined;
+        }).filter(Boolean); // this filter removes undefined values
+
+        // Create a string of service names separated by commas
+        const servicesString = serviceNames.join(", ");
+
         const mail = await transporter.sendMail({
             from: user,
             to: "jnmyers774@gmail.com",
@@ -42,8 +53,9 @@ export default async function ContactAPI(req, res) {
             html: `
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>
-            <p>Email: ${phone}</p>
+            <p>Phone: ${phone}</p>
             <p>Message: ${message}</p>
+            <p>Services Interested In: ${servicesString}</p>  <!-- Include the services here -->
             `,
         });
 
@@ -65,11 +77,5 @@ export default async function ContactAPI(req, res) {
 const isValidEmail = (email) => {
     const emailRegex = /^\S+@\S+\.\S+$/;
     return emailRegex.test(email);
-}
+}; // Add semi-colon here
 
-
-/* 
-I know there are a lot of comments in this file, 
-but I wanted to make sure I explained everything as clearly as 
-possible for my future self. 
-*/

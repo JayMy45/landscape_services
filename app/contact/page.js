@@ -1,17 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { serviceData } from "../data/serviceData";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
 
+    const [resetCount, setResetCount] = useState(0);
 
     // loading state for submit button
     const [loading, setLoading] = useState(false);
+
+    // checkbox state to track which services are selected
+    const [checkedOptions, setCheckedOptions] = useState(new Set())
+
+    // set initial state of checkbox to include Mowing and Trimming
+    useEffect(() => {
+        const initialSet = new Set();
+        // for each service, if name is Mowing or Trimming, add id to initialSet
+        serviceData.forEach(({ id, name }) => {
+            if (name === "Mowing" || name === "Trimming") {
+                initialSet.add(id);
+            }
+        });
+
+        setCheckedOptions(initialSet);
+    }, [resetCount]);
+
 
 
     // notify functions to display toast messages
@@ -32,7 +49,9 @@ export default function Contact() {
             email: event.target.email.value,
             phone: event.target.phone.value,
             message: event.target.message.value,
+            services: Array.from(checkedOptions),
         };
+
         console.log(data);
         const response = await fetch('/api/contact', {
             method: 'POST',
@@ -45,10 +64,11 @@ export default function Contact() {
             console.log('response worked');
 
             // reset form
-            event.target.name.value = '';
-            event.target.email.value = '';
-            event.target.phone.value = '';
-            event.target.message.value = '';
+            event.target.reset();
+            setCheckedOptions(new Set());
+
+            // After successful submission and form reset
+            setResetCount(prevCount => prevCount + 1);
 
             // display toast message when email is sent successfully
             notifySuccess();
@@ -65,7 +85,7 @@ export default function Contact() {
     return (
         <>
             <section className="h-full md:px-10 md:pt-10">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="">
                         <div className="w-full border-b border-black dark:border-slate-100 mb-10 p-2">
                             <h2 className="uppercase font-bold text-2xl">Contact Us</h2>
@@ -79,7 +99,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='name'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     type="text"
                                     minLength={2}
                                     maxLength={150}
@@ -92,7 +112,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='phone'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     type="text"
                                     minLength={7}
                                     maxLength={15}
@@ -104,7 +124,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='email'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     required
                                     type="email"
                                     minLength={5}
@@ -118,7 +138,7 @@ export default function Contact() {
                             <div className="p-1 mb-5 md:mb-0 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <textarea
                                     id="message"
-                                    className="text-stone-100 w-full p-3 bg-transparent"
+                                    className="dark:text-stone-100 text-black w-full p-3 bg-transparent"
                                     placeholder="Leave a message..."
                                     name="message"
                                     rows="4"
@@ -132,15 +152,26 @@ export default function Contact() {
                             <section className="mx-auto pl-16 hidden md:block">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {serviceData.map(({ id, name }) => (
-                                        name === "Mowing" || name === "Trimming"
-                                            ? <div key={id} className=""> {/* Adding a key prop using the id */}
-                                                <input type="checkbox" id={id} name={name} value={id} checked />
-                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
-                                            </div>
-                                            : <div key={id} className=""> {/* Adding a key prop using the id */}
-                                                <input type="checkbox" id={id} name={name} value={id} />
-                                                <label htmlFor={id} className="text-xs ml-1" >{name}</label>
-                                            </div>
+                                        <div key={id} className="">
+                                            <input
+                                                onChange={(e) => {
+                                                    const copy = new Set(checkedOptions);
+                                                    if (copy.has(id)) {
+                                                        copy.delete(id);
+                                                    } else {
+                                                        copy.add(id);
+                                                    }
+                                                    setCheckedOptions(copy);
+                                                }}
+                                                type="checkbox"
+                                                id={id}
+                                                name={name}
+                                                value={id}
+                                                checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
+                                            />
+                                            <label htmlFor={id} className="text-xs ml-1" >{name}</label>
+                                        </div>
+
                                     ))}
                                 </div>
                             </section>
@@ -156,6 +187,13 @@ export default function Contact() {
                     </div>
                 </form>
             </section >
+            {/* toast container */}
+            <div className='z-11'>
+                <ToastContainer
+                    position='top-center'
+                    autoClose={2000}
+                />
+            </div>
         </>
     )
 }

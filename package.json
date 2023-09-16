@@ -11,6 +11,7 @@
   "dependencies": {
     "autoprefixer": "10.4.15",
     "cloudinary": "^1.40.0",
+    "dotenv": "^16.3.1",
     "gsap": "^3.12.2",
     "next": "13.4.19",
     "nodemailer": "^6.9.5",
