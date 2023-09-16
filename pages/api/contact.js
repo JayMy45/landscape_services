@@ -4,9 +4,6 @@ require('dotenv').config();
 import { serviceData } from "@/app/data/serviceData";
 import nodemailer from "nodemailer";
 
-
-
-
 export default async function ContactAPI(req, res) {
     const { name, email, phone, message, services } = req.body;
 
