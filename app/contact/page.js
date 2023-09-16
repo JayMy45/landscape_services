@@ -65,7 +65,7 @@ export default function Contact() {
     return (
         <>
             <section className="h-full md:px-10 md:pt-10">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="">
                         <div className="w-full border-b border-black dark:border-slate-100 mb-10 p-2">
                             <h2 className="uppercase font-bold text-2xl">Contact Us</h2>
@@ -79,7 +79,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='name'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     type="text"
                                     minLength={2}
                                     maxLength={150}
@@ -92,7 +92,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='phone'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     type="text"
                                     minLength={7}
                                     maxLength={15}
@@ -104,7 +104,7 @@ export default function Contact() {
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <input
                                     id='email'
-                                    className="text-stone-100 p-3 w-full bg-transparent"
+                                    className="dark:text-stone-100 text-black p-3 w-full bg-transparent"
                                     required
                                     type="email"
                                     minLength={5}
@@ -118,7 +118,7 @@ export default function Contact() {
                             <div className="p-1 mb-5 md:mb-0 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
                                 <textarea
                                     id="message"
-                                    className="text-stone-100 w-full p-3 bg-transparent"
+                                    className="dark:text-stone-100 text-black w-full p-3 bg-transparent"
                                     placeholder="Leave a message..."
                                     name="message"
                                     rows="4"
@@ -129,21 +129,21 @@ export default function Contact() {
                             <div className="mx-auto hidden md:block">
                                 <h2>Add On Services</h2>
                             </div>
-                            <section className="mx-auto pl-16 hidden md:block">
+                            {/* <section className="mx-auto pl-16 hidden md:block">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {serviceData.map(({ id, name }) => (
                                         name === "Mowing" || name === "Trimming"
-                                            ? <div key={id} className=""> {/* Adding a key prop using the id */}
+                                            ? <div key={id} className="">
                                                 <input type="checkbox" id={id} name={name} value={id} checked />
                                                 <label htmlFor={id} className="text-xs ml-1" >{name}</label>
                                             </div>
-                                            : <div key={id} className=""> {/* Adding a key prop using the id */}
+                                            : <div key={id} className="">
                                                 <input type="checkbox" id={id} name={name} value={id} />
                                                 <label htmlFor={id} className="text-xs ml-1" >{name}</label>
                                             </div>
                                     ))}
                                 </div>
-                            </section>
+                            </section> */}
 
                             <div className="flex justify-center mb-7 md:mt-7">
                                 <button
