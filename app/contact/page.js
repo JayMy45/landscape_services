@@ -7,7 +7,7 @@ import { serviceData } from "../data/serviceData";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
-
+    // resetCount state to reset checkbox state
     const [resetCount, setResetCount] = useState(0);
 
     // loading state for submit button
