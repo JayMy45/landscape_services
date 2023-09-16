@@ -1,7 +1,66 @@
+'use client';
+
+import React from 'react';
+import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { serviceData } from "../data/serviceData";
 
 export default function Contact() {
 
+
+    // loading state for submit button
+    const [loading, setLoading] = useState(false);
+
+
+    // notify functions to display toast messages
+    const notifySuccess = () => {
+        toast.success('Email sent successfully');
+    };
+
+    const notifyError = () => {
+        toast.error('Failed to send email');
+    };
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        setLoading(true);
+
+        const data = {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            phone: event.target.phone.value,
+            message: event.target.message.value,
+        };
+        console.log(data);
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        if (response.ok) {
+            console.log('response worked');
+
+            // reset form
+            event.target.name.value = '';
+            event.target.email.value = '';
+            event.target.phone.value = '';
+            event.target.message.value = '';
+
+            // display toast message when email is sent successfully
+            notifySuccess();
+        }
+        if (!response.ok) {
+            setLoading(false);
+            console.log('Error sending message');
+
+            // display toast message when email fails to send
+            notifyError();
+        }
+    }
 
     return (
         <>

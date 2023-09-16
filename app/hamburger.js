@@ -47,8 +47,8 @@ export default function Hamburger() {
                 />
             </div>
             <div className={navbarOpen
-                ? "fixed left-0 top-0 w-[75%] h-screen bg-slate-800 p-7 ease-in duration-500"
-                : "fixed left-[-100%]  w-[75%] h-screen top-0 p-10 ease-in duration-500"
+                ? "fixed z-50 left-0 top-0 w-[75%] h-screen bg-slate-800 p-7 ease-in duration-500"
+                : "fixed z-50 left-[-100%]  w-[75%] h-screen top-0 p-10 ease-in duration-500"
             }
             >
                 <div className="flex w-full items-center justify-end">
