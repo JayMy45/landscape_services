@@ -12,16 +12,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 60, 70, 70;
-    /* medium gray with a slight blue-green hue */
-    --background-end-rgb: 60, 70, 70;
+    --background-start-rgb: 50, 50, 50;
+    /* medium gray with a subtle hint of blue-green */
+    --background-end-rgb: 50, 50, 50;
   }
 }
-
-
-
-
-
 
 body {
   color: rgb(var(--foreground-rgb));
