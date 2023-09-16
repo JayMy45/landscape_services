@@ -18,15 +18,15 @@ export default function Services() {
 
     return (
         <>
-            <section className="h-full pt-5 pb-5 md:p-10">
+            <section className="h-full p-2 md:pt-5 md:pb-5 md:p-10">
                 <div className="">
-                    <div className="w-full border-b border-black dark:border-slate-100 md:mb-10 p-2">
-                        <h2 className="uppercase font-bold text-2xl">Services</h2>
+                    <div className="w-full border-b-2 border-stone-700 dark:border-slate-100 md:mb-10 p-2">
+                        <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Services</h2>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5 w-fit mx-auto pt-5">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-2 md:gap-5 w-fit mx-auto pt-5">
                         {
                             serviceData.map(({ id, name, description, image }) => {
-                                return <figure className="flex flex-col w-fit h-fit rounded-md overflow-hidden bg-green-600 bg-opacity-60 shadow-xl mx-auto pr-2 md:pr-5 md:pb-5 md:pb-0" key={`service--${id}`}>
+                                return <figure className="flex flex-col w-fit h-fit rounded-md overflow-hidden bg-green-600 dark:bg-green-700 bg-opacity-60 shadow-xl mx-auto pr-2 md:pr-5 md:pb-5 md:pb-0" key={`service--${id}`}>
                                     <div className="w-44 md:w-56 h-36 md:h-fit">
                                         <Image
                                             src={`${image}`}

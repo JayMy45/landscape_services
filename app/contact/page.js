@@ -84,16 +84,16 @@ export default function Contact() {
 
     return (
         <>
-            <section className="h-full md:px-10 md:pt-10">
+            <section className="h-full p-2 md:pt-5 md:pb-5 md:p-10">
                 <form onSubmit={handleSubmit}>
                     <div className="">
-                        <div className="w-full border-b border-black dark:border-slate-100 mb-10 p-2">
-                            <h2 className="uppercase font-bold text-2xl">Contact Us</h2>
+                        <div className="w-full border-b-2 border-stone-700 dark:border-slate-100 mb-10 p-2">
+                            <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Contact Us</h2>
                         </div>
 
                         <div className="grid grid-col-1 gap-7">
                             <div className="mx-auto">
-                                <h2 className="text-xl dark:text-slate-100">Get in Touch</h2>
+                                <h2 className="text-xl font-semibold dark:text-slate-100">Get in Touch</h2>
                             </div>
                             {/* Name */}
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
@@ -176,9 +176,9 @@ export default function Contact() {
                                 </div>
                             </section>
 
-                            <div className="flex justify-center mb-7 md:mt-7">
+                            <div className="flex justify-center mb-7 md:mb-0 md:mt-7">
                                 <button
-                                    // disabled={loading}
+                                    disabled={loading}
                                     className="bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit">
                                     <h2 className="uppercase text-slate-200 text-lg font-bold">Submit</h2>
                                 </button>
