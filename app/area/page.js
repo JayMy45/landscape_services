@@ -4,10 +4,10 @@ export default function AreaPage() {
     return (
         <>
             <section className="h-full p-2 md:pt-5 md:pb-5 md:p-10" id="service_area">
-                <div>
-                    <h2 className="text-2xl text-stone-700 dark:text-slate-100 border-b-2 border-stone-700 dark:border-slate-100 uppercase font-bold pb-5">Area of Operation</h2>
+                <div className="w-full border-b-2 border-stone-700 dark:border-slate-100 mb-10 p-2">
+                    <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Area of Operation</h2>
                 </div>
-                <div className="h-2/3 md:rounded-b-xl dark:bg-slate-200" style={{
+                <div className="h-2/3 md:rounded-xl bg-transparent dark:bg-slate-200" style={{
                     backgroundImage:
                         "linear-gradient(rgba(3,1,0.2,0.2),rgba(3,1,0.2,0.2)), url('/SouthCarolina.png')",
                     backgroundSize: "200px, 200px",
@@ -20,7 +20,7 @@ export default function AreaPage() {
                                 return (
                                     <div key={area.id} className="text-xl md:text-2xl">
 
-                                        <div className="bg-slate-100 dark:bg-slate-300 bg-opacity-95 dark:opacity-95 w-38 md:w-38 lg:w-44 mx-auto text-center text-sm p-6 rounded-md mt-2">
+                                        <div className="bg-slate-100 dark:bg-slate-300 bg-opacity-95 dark:opacity-95 w-38 md:w-38 lg:w-44 mx-auto text-center text-sm p-6 rounded-md">
                                             <h2 className="text-amber-800 font-bold uppercase">{area.location}</h2>
                                         </div>
                                     </div>

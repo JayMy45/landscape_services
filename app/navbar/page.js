@@ -5,7 +5,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-500 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95">
+            <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95">
                 <div className="navbar flex h-24 ">
                     <div className="w-1/3 flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
@@ -35,7 +35,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-            <nav className="flex">
+            <nav className="flex relative z-10 sticky top-0 bg-stone-300 sm:border-b md:border-none border-stone-700">
                 <Hamburger />
             </nav>
 

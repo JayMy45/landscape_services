@@ -43,7 +43,7 @@ export default function Hamburger() {
                 <AiOutlineMenu
                     onClick={handleToggle}
                     size={30}
-                    className="text-slate-100"
+                    className="text-slate-700"
                 />
             </div>
             <div className={navbarOpen

@@ -149,7 +149,7 @@ export default function Contact() {
                             <div className="mx-auto hidden md:block">
                                 <h2>Add On Services</h2>
                             </div>
-                            <section className="mx-auto pl-16 hidden md:block">
+                            <section className="mx-auto pl-16">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {serviceData.map(({ id, name }) => (
                                         <div key={id} className="">
