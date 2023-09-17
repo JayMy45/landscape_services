@@ -169,7 +169,7 @@ export default function Contact() {
                                                 value={id}
                                                 checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
                                             />
-                                            <label htmlFor={id} className="text-xs ml-1" >{name}</label>
+                                            <label htmlFor={id} className="text-xs ml-1 capitalize" >{name}</label>
                                         </div>
 
                                     ))}

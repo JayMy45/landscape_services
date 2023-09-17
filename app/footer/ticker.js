@@ -27,10 +27,10 @@ export default function TickerComponent() {
         }} className='my-auto p-1 drop-shadow-lg border-t-2 border-b-2 border-zinc-100 dark:border-black'>
             <div ref={ref} className="ticker" style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
                 <div style={{ paddingRight: '0px' }} className='text-zinc-100 dark:text-blue-200'>
-                    &bull; The starting price for mowing/trimming is $85 (no matter the lot size) &bull; Any extra services Charges will be applied &bull; We accept Cash, Cashapp, Visa Debit/Credit Cards &bull; Late charges will apply when not paid immediately after service &bull; Deposits are required before service for new potential clients
+                    &bull; The Starting price for Mowing/Trimming is <span className='text-yellow-400'>$85</span> (<span className='uppercase'>no matter the lot size</span>) &bull; Additional Charges will be applied for Extra Services &bull; We accept Cash, Cashapp, and Visa Debit/Credit Cards &bull; Late Charges will apply when not paid immediately after Service &bull; Deposits are Required before service for New/Potential Clients
                 </div>
                 <div className='text-zinc-100 dark:text-blue-200'>
-                    &bull; The starting price for mowing/trimming is $85 (no matter the lot size) &bull; Any extra services Charges will be applied &bull; We accept Cash, Cashapp, Visa Debit/Credit Cards &bull; Late charges will apply when not paid immediately after service &bull; Deposits are required before service for new potential clients
+                    &bull; The Starting price for Mowing/Trimming is <span className='text-yellow-400'>$85</span> (<span className='uppercase'>no matter the lot size</span>) &bull; Additional Charges will be applied for Extra Services &bull; We accept Cash, Cashapp, and Visa Debit/Credit Cards &bull; Late Charges will apply when not paid immediately after Service &bull; Deposits are Required before service for New/Potential Clients
                 </div>
             </div>
         </div>
