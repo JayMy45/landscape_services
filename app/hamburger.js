@@ -39,11 +39,10 @@ export default function Hamburger() {
     return (
         <>
             <div className="flex items-center cursor-pointer md:hidden mx-auto my-5 mr-5">
-
                 <AiOutlineMenu
                     onClick={handleToggle}
                     size={30}
-                    className="text-slate-700"
+                    className="text-slate-700 dark:text-slate-200"
                 />
             </div>
             <div className={navbarOpen

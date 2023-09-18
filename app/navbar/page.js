@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Hamburger from "../hamburger";
+import Image from "next/image";
 
 export default function Navbar() {
 
     return (
         <>
-            <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95">
+            <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 py-1">
                 <div className="navbar flex h-24 ">
                     <div className="w-1/3 flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
@@ -21,7 +22,8 @@ export default function Navbar() {
                         </ul>
                     </div>
 
-                    <div className="w-1/3">
+                    <div className="w-1/3 flex justify-center items-center">
+                        <Image src="/jlsLOGO5.png" alt="Business Logo" width={150} height={150} />
                     </div>
 
                     <div className="w-1/3 flex justify-center">
@@ -35,7 +37,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-            <nav className="flex relative z-10 sticky top-0 bg-stone-300 sm:border-b md:border-none border-stone-700">
+            <nav className="flex relative z-10 sticky top-0 bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95">
                 <Hamburger />
             </nav>
 
