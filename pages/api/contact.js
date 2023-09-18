@@ -52,7 +52,7 @@ export default async function ContactAPI(req, res) {
             <p>Email: ${email}</p>
             <p>Phone: ${phone}</p>
             <p>Message: ${message}</p>
-            <p>Services Interested In: ${servicesString}</p>  <!-- Include the services here -->
+            <p><strong>Services Interested In</strong>: ${servicesString}</p>  <!-- Include the services here -->
             `,
         });
 
