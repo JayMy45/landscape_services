@@ -84,10 +84,10 @@ export default function Contact() {
 
     return (
         <>
-            <section className="h-full p-2 md:pt-5 md:pb-5 md:p-10">
+            <section id='contact' className="h-full p-2 md:pb-5 md:px-10 md:pt-28">
                 <form onSubmit={handleSubmit}>
                     <div className="">
-                        <div className="w-full border-b-2 border-stone-700 dark:border-slate-100 mb-10 p-2">
+                        <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
                             <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Contact Us</h2>
                         </div>
 
@@ -175,7 +175,6 @@ export default function Contact() {
                                     ))}
                                 </div>
                             </section>
-
                             <div className="flex justify-center mb-7 md:mb-0 md:mt-7">
                                 <button
                                     disabled={loading}
