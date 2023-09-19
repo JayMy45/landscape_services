@@ -18,9 +18,9 @@ export default function Services() {
 
     return (
         <>
-            <section className="h-full p-2 md:pt-5 md:pb-5 md:p-10">
+            <section id="services" className="h-full p-2 md:pb-5 md:px-10 md:pt-28">
                 <div className="">
-                    <div className="w-full border-b-2 border-stone-700 dark:border-slate-100 md:mb-10 p-2">
+                    <div className="w-full border-b border-stone-700 dark:border-slate-100 md:mb-10 p-2">
                         <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Services</h2>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-2 md:gap-5 w-fit mx-auto pt-5">
