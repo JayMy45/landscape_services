@@ -23,7 +23,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="w-1/3 flex justify-center items-center">
-                        <Image src="/jlsLOGO5.png" alt="Business Logo" width={150} height={150} />
+                        <Image src="/jlsLOGO1.png" alt="Business Logo" width={150} height={150} />
                     </div>
 
                     <div className="w-1/3 flex justify-center">
