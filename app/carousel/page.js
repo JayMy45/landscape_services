@@ -16,30 +16,42 @@ export default function CarouselPage() {
                 next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
                 prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
             >
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center h-full">
+                    <Paper className=" border-r">
+                        <img src="lawnPics/Residential1a.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
                     <Paper className="bg-white">
-                        <img src="FlowerBed.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
+                        <img src="lawnPics/Residential1.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
                     </Paper>
-                    <Paper>
-                        <img src="hedges.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
-                    </Paper>
-                    <Paper>
-                        <img src="GrayHouston.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
-                    </Paper>
-
                 </div>
-                <div className="flex justify-center items-center py-10">
+
+                <div className="flex justify-center items-center h-full">
+                    <Paper className=" border-r">
+                        <img src="lawnPics/Residential2.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
+                    <Paper className="bg-white">
+                        <img src="lawnPics/Residential2a.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
+                </div>
+
+                <div className="flex justify-center items-center h-full">
+                    <Paper className=" border-r">
+                        <img src="lawnPics/Residential3.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
+                    <Paper className="bg-white">
+                        <img src="lawnPics/Residential3a.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
+                </div>
+
+                <div className="flex justify-center items-center h-full">
+                    <Paper className=" border-r">
+                        <img src="lawnPics/Commercial1.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
+                    </Paper>
                     <Paper className="">
-                        <img src="FlowerBed.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
+                        <img src="lawnPics/Commercial1a.png" alt="Flower Bed" className='bg-white' height={750} width={750} />
                     </Paper>
-                    <Paper>
-                        <img src="hedges.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
-                    </Paper>
-                    <Paper>
-                        <img src="fertilizer.png" alt="Flower Bed" className='bg-white' height={200} width={200} />
-                    </Paper>
-
                 </div>
+
             </Carousel>
         </>
     )
