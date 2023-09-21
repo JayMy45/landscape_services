@@ -4,7 +4,7 @@ export default function About() {
 
     return (
         <>
-            <section className="h-full p-2 md:pt-28 md:pb-5 md:p-10" id="about">
+            <section className="h-full p-2 md:pt-28 md:pb-5 md:p-5" id="about">
                 <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
                     <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">About Us</h2>
                 </div>
