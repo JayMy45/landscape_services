@@ -84,7 +84,7 @@ export default function Contact() {
 
     return (
         <>
-            <section id='contact' className="h-full p-2 md:pb-5 md:px-10 md:pt-28">
+            <section id='contact' className="h-full p-2 pt-16 md:pb-5 md:px-10 md:pt-28">
                 <form onSubmit={handleSubmit}>
                     <div className="">
                         <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">

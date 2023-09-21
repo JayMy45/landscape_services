@@ -3,7 +3,7 @@ import { ServiceArea } from "../data/ServiceArea";
 export default function AreaPage() {
     return (
         <>
-            <section className="h-full p-2 md:pb-5 md:px-10 md:pt-28" id="area">
+            <section className="h-full p-2 pt-16 md:pb-5 md:px-10 md:pt-28" id="area">
                 <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
                     <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Area of Operation</h2>
                 </div>

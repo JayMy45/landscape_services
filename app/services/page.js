@@ -18,7 +18,7 @@ export default function Services() {
 
     return (
         <>
-            <section id="services" className="h-full p-2 md:pb-5 md:px-10 md:pt-28">
+            <section id="services" className="h-full p-2 pt-16 md:pb-5 md:px-10 md:pt-28">
                 <div className="">
                     <div className="w-full border-b border-stone-700 dark:border-slate-100 md:mb-10 p-2">
                         <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Services</h2>

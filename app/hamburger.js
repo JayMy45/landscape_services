@@ -38,15 +38,15 @@ export default function Hamburger() {
 
     return (
         <>
-            <div className="flex items-center cursor-pointer md:hidden mx-auto my-5 mr-5">
+            <div className="flex cursor-pointer md:hidden mx-auto my-5 mr-5">
                 <AiOutlineMenu
                     onClick={handleToggle}
                     size={30}
-                    className="text-slate-700 dark:text-slate-200"
+                    className="text-slate-200"
                 />
             </div>
             <div className={navbarOpen
-                ? "fixed z-50 left-0 top-0 w-[75%] h-screen bg-slate-800 p-7 ease-in duration-500"
+                ? "fixed z-50 left-0 top-0 w-[75%] h-screen bg-blue-950 p-7 ease-in duration-500"
                 : "fixed z-50 left-[-100%]  w-[75%] h-screen top-0 p-10 ease-in duration-500"
             }
             >
@@ -66,35 +66,28 @@ export default function Hamburger() {
                                 Home
                             </li>
                         </Link>
-                        <Link href="/">
+                        <Link href="#about">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 cursor-pointer text-slate-200">
-                                About
+                                About Us
                             </li>
                         </Link>
-                        <Link href="/">
+                        <Link href="#area">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 cursor-pointer text-slate-200">
-                                Work
+                                Areas of Operation
                             </li>
                         </Link>
-                        <Link href="services">
+                        <Link href="#services">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 cursor-pointer text-slate-200">
                                 Services
                             </li>
                         </Link>
-                        <Link href="area">
-                            <li
-                                onClick={() => setNavbarOpen(false)}
-                                className="py-4 cursor-pointer text-slate-200">
-                                Areas
-                            </li>
-                        </Link>
-                        <Link href="contact">
+                        <Link href="#contact">
                             <li
                                 onClick={() => setNavbarOpen(false)
                                 }
