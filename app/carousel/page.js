@@ -9,8 +9,9 @@ export default function CarouselPage() {
     return (
         <>
             <Carousel
-                className=""
+                className="mb-10"
                 animation="slide"
+                indicators={false}
                 height={300}
                 swipe={true}
                 next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
