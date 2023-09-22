@@ -1,5 +1,31 @@
 import Image from "next/image"
 import { serviceData } from "../data/serviceData"
+import Head from "next/head";
+
+// SEO Metadata
+export const metadata = {
+    title: 'Our Services',
+    description: 'A list of services we provide including mowing, trimming, aeration, and more.',
+    openGraph: {
+        title: 'Our Landscaping Services',
+        description: 'A list of premium landscaping services we provide.',
+        images: ['/RidingLawnmower.png', '']
+    },
+};
+
+// JSON-LD structured data
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': serviceData.map((service, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'url': `/services#${service.id}`,
+        'name': service.name,
+        'description': service.description,
+        'image': service.image
+    }))
+};
 
 
 export default function Services() {
@@ -18,6 +44,13 @@ export default function Services() {
 
     return (
         <>
+            {/* Insert the JSON-LD structured data into the head of your document */}
+            <Head>
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            </Head>
+
             <section id="services" className="h-full p-2 pt-16 md:pb-5 md:px-10 md:pt-28">
                 <div className="">
                     <div className="w-full border-b border-stone-700 dark:border-slate-100 md:mb-10 p-2">
@@ -31,7 +64,7 @@ export default function Services() {
                                         <Image
                                             src={`${image}`}
                                             className="ml-3 mt-2"
-                                            alt="picture of service"
+                                            alt={`picture of ${name} service`}
                                             height={75}
                                             width={75}
                                         />
