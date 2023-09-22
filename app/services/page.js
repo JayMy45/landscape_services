@@ -44,7 +44,6 @@ export default function Services() {
 
     return (
         <>
-            {/* Insert the JSON-LD structured data into the head of your document */}
             <Head>
                 <script type="application/ld+json">
                     {JSON.stringify(jsonLd)}
