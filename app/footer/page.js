@@ -15,7 +15,7 @@ export default function Footer() {
             <footer className="">
                 <div className="footer flex h-48">
                     <div className="w-2/6 flex justify-center items-center">
-                        <Image src="/jlsLOGO.1.png" alt="Business Logo" width={150} height={150} />
+                        <Image className="" src="/jlsLOGO.1.png" alt="Business Logo" width={150} height={150} />
                     </div>
                     <div className="w-1/6 border">
 

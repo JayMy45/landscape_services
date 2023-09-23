@@ -48,7 +48,7 @@ export default function Home() {
 
               <div className='flex flex-col items-center justify-center space-y-1 p-1'>
                 <FaCcVisa size={50} className='text-slate-200' />
-                <h3 className='text-center text-xs text-slate-200'>CashApp</h3>
+                <h3 className='text-center text-xs text-slate-200'>VISA</h3>
               </div>
 
               <div className='flex flex-col items-center justify-center space-y-1 p-1'>
