@@ -16,7 +16,7 @@ export default function Home() {
         <Image className="dark:hidden block" src="/JonesLandService5.png" height={200} width={375} alt='Jones Landscaping Services' />
       </div>
       <CarouselPage />
-      <div className=' bg-stone-700 md:rounded-b-lg  flex flex-col md:flex-row'>
+      <div className=' bg-stone-500 bg-opacity-50 dark:bg-stone-700 dark:bg-opacity-70 md:rounded-b-lg  flex flex-col md:flex-row'>
         <div className=' pt-10 px-2 md:p-10 flex justify-center items-center w-full h-full md:w-1/2 space-x-2 lg:space-x-4'>
 
           <div className='h-52 rounded-lg w-44 p-10 bg-zinc-600 px-4 py-1 lg:px-7 lg:py-2 shadow-lg'>
@@ -32,28 +32,28 @@ export default function Home() {
 
         </div>
         <div className='p-3 pb-10 md:p-10 md:w-1/2 md:flex'>
-          <div className='p-10 flex flex-col h-full w-full lg:bg-zinc-600 lg:bg-opacity-20 rounded-md lg:shadow-sm space-y-4'>
-            <h2 className='text-md lg:text-normal text-center italic'>Accepted forms of payment</h2>
+          <div className='p-10 flex flex-col h-full w-full lg:bg-zinc-500 lg:bg-opacity-30 lg:dark:bg-zinc-600 lg:dark:bg-opacity-10 rounded-md lg:shadow-sm space-y-4'>
+            <h2 className='text-md text-slate-200 lg:text-normal text-center italic'>Accepted forms of payment</h2>
             <div className='flex flex-row justify-center items-center space-x-0 lg:space-x-3'>
 
               <div className='flex flex-col items-center justify-center p-1 space-y-1'>
                 <BsCash size={50} className='ml-1  bg-slate-200 rounded-lg text-green-500 p-1' />
-                <h3 className='text-center text-xs'>Cash</h3>
+                <h3 className='text-center text-xs text-slate-200'>Cash</h3>
               </div>
 
               <div className='flex flex-col items-center justify-center space-y-1 p-1'>
                 <SiCashapp size={50} className='text-green-500' />
-                <h3 className='text-center text-xs'>CashApp</h3>
+                <h3 className='text-center text-xs text-slate-200'>CashApp</h3>
               </div>
 
               <div className='flex flex-col items-center justify-center space-y-1 p-1'>
                 <FaCcVisa size={50} className='text-slate-200' />
-                <h3 className='text-center text-xs'>CashApp</h3>
+                <h3 className='text-center text-xs text-slate-200'>CashApp</h3>
               </div>
 
               <div className='flex flex-col items-center justify-center space-y-1 p-1'>
                 <BsFillCreditCardFill size={50} className='text-slate-200' />
-                <h3 className='text-center text-xs'>Credit/Debit</h3>
+                <h3 className='text-center text-xs text-slate-200'>Credit/Debit</h3>
               </div>
 
             </div>

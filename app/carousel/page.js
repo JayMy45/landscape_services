@@ -9,11 +9,12 @@ export default function CarouselPage() {
     return (
         <>
             <Carousel
-                className=""
+                // * this className is used to set the height of the carousel dynamically depending on screensize
+                className="carousel-container"
                 animation="slide"
                 indicators={false}
                 timeout={1000}
-                height={300}
+                // height={350}
                 swipe={true}
             // next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
             // prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
