@@ -58,7 +58,7 @@ export default function Services() {
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-2 md:gap-5 w-fit mx-auto pt-5">
                         {
                             serviceData.map(({ id, name, description, image }) => {
-                                return <figure className="flex flex-col w-fit h-fit rounded-md overflow-hidden bg-green-600 dark:bg-green-700 bg-opacity-60 shadow-xl mx-auto pr-2 md:pr-5 md:pb-5" key={`service--${id}`}>
+                                return <figure className="flex flex-col w-fit h-fit rounded-md overflow-hidden bg-green-600 dark:bg-green-700 bg-opacity-60 shadow-xl mx-auto pr-1 md:pr-5 md:pb-5" key={`service--${id}`}>
                                     <div className="w-44 md:w-56 h-36 md:h-fit">
                                         <Image
                                             src={`${image}`}

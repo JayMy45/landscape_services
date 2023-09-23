@@ -10,7 +10,7 @@ import { FaCcVisa } from "react-icons/fa"
 
 export default function Home() {
   return (
-    <main className="min-h-screen md:px-24 md:pt-5 md:pb-5">
+    <main className="min-h-screen md:px-10 lg:px-24 xl:px-40 md:pt-5 md:pb-5">
       <div className='flex justify-center bg-stone-500 bg-opacity-50 dark:bg-stone-700 dark:bg-opacity-70 md:rounded-t-lg w-full py-3 px-2'>
         <Image className="hidden dark:block" src="/JonesLandService4.png" height={200} width={375} alt='Jones Landscaping Services' />
         <Image className="dark:hidden block" src="/JonesLandService5.png" height={200} width={375} alt='Jones Landscaping Services' />
