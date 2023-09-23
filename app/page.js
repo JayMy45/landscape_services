@@ -17,16 +17,16 @@ export default function Home() {
       </div>
       <CarouselPage />
       <div className=' bg-stone-700 md:rounded-b-lg  flex flex-col md:flex-row'>
-        <div className=' pt-10 px-2 md:p-10 flex justify-center items-center w-full h-full md:w-1/2 space-x-4'>
+        <div className=' pt-10 px-2 md:p-10 flex justify-center items-center w-full h-full md:w-1/2 space-x-2 lg:space-x-4'>
 
-          <div className='h-52 rounded-lg w-44 p-10 bg-zinc-600 px-7 py-2 shadow-lg'>
+          <div className='h-52 rounded-lg w-44 p-10 bg-zinc-600 px-4 py-1 lg:px-7 lg:py-2 shadow-lg'>
             <h2 className='text-slate-200 text-lg font-semibold pt-2'>Mowing and Trimming</h2>
             <h2 className='text-slate-200 text-md pt-2'>starts at</h2>
             <h1 className='text-yellow-700 text-6xl font-bold pb-2'>$85</h1>
             <h2 className='text-slate-300 text-xs pb-2 italic'>all property sizes</h2>
           </div>
 
-          <div className='h-52 rounded-lg w-44 bg-zinc-600 px-7 py-5 shadow-lg'>
+          <div className='h-52 rounded-lg w-44 bg-zinc-600 px-4 py-1 lg:px-7 lg:py-2 shadow-lg'>
             <h2 className='text-slate-200 text-lg pt-2 italic'>Additional Charges will be applied for extra <span className='hover:text-blue-500'><a href='#services'>Services</a></span></h2>
           </div>
 
