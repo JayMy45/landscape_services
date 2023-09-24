@@ -14,13 +14,14 @@ export default function Footer() {
                 </div>
             </div>
             <footer className=" bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 pt-2 shadow-md">
+
                 <div className="footer flex h-48">
-                    <div className="w-1/6 flex justify-center items-center border ">
+                    <div className="w-1/6 flex justify-center items-center ">
                         <Image className="hidden md:block" src="/jlsLOGO.1.png" alt="Business Logo" width={150} height={150} />
                         <Image className="block md:hidden" src="/jlsLOGO.png" alt="Business Logo with initial" width={50} height={50} />
                     </div>
 
-                    <div className="w-4/6 border text-center">
+                    <div className="w-4/6 text-center">
                         <div className="py-4">
                             <ul className="inline-flex justify-between items-center py-16">
                                 <Link href="/">
@@ -42,8 +43,14 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="w-1/6 border">
+                    <div className="w-1/6 text-left">
+                        <ul className="flex flex-col justify-between py-16">
 
+                            <li className="text-sm border-blue-50 p-1 text-blue-50 mr-16">Phone: 803-563-0416</li>
+                            <Link href="#contact">
+                                <li className="hover:border-b text-sm border-blue-50 p-1 text-blue-50 mr-16">Email: jonesservice85@gmail.com</li>
+                            </Link>
+                        </ul>
                     </div>
 
                 </div>
