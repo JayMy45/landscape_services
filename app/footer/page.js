@@ -21,7 +21,7 @@ export default function Footer() {
                         <Image className="block md:hidden" src="/jlsLOGO.png" alt="Business Logo with initial" width={50} height={50} />
                     </div>
 
-                    <div className="w-4/6 text-center">
+                    <div className="hidden md:block w-4/6 text-center">
                         <div className="py-4">
                             <ul className="inline-flex justify-between items-center py-16">
                                 <Link href="/">
@@ -43,13 +43,15 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="w-1/6 text-left">
-                        <ul className="flex flex-col justify-between py-16">
+                    <div className="w-5/6 md:w-1/6 text-left">
+                        <ul className="flex flex-col justify-between items-center py-16">
 
                             <li className="text-sm border-blue-50 p-1 text-blue-50 mr-16">Phone: 803-563-0416</li>
-                            <Link href="#contact">
-                                <li className="hover:border-b text-sm border-blue-50 p-1 text-blue-50 mr-16">Email: jonesservice85@gmail.com</li>
-                            </Link>
+                            <li className="hover:border-b text-sm border-blue-50 p-1 text-blue-50 mr-16">Email:<span> </span>
+                                <Link href="#contact">
+                                    jonesservice85@gmail.com
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
