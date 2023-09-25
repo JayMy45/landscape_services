@@ -1,21 +1,41 @@
 'use client'
 
 import { Paper } from "@mui/material";
+import { useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 
 export default function CarouselPage() {
 
+    const [isSwiping, setIsSwiping] = useState(false);
+    const [autoPlay, setAutoPlay] = useState(true);
+
+    useEffect(() => {
+        if (isSwiping) {
+            setAutoPlay(false);  // Pause autoplay when swiping
+        } else {
+            // Resume autoplay with a delay (to not interfere immediately with the manual swipe)
+            const timer = setTimeout(() => {
+                setAutoPlay(true);
+                console.log('changed autoplay to true')
+            }, 4000);
+
+            return () => clearTimeout(timer);  // Cleanup the timer on component unmount or state changes
+        }
+    }, [isSwiping]);
 
     return (
         <>
             <Carousel
                 // * this className is used to set the height of the carousel dynamically depending on screensize
                 className="carousel-container"
-                animation="slide"
+                animation="fade"
                 indicators={false}
-                timeout={1000}
-                // height={350}
+                autoPlay={autoPlay}
+                timeout={4000}
+                onSwipeStart={() => setIsSwiping(true)}
+                onSwipeEnd={() => setIsSwiping(false)}
                 swipe={true}
+            // height={350}
             // next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
             // prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
             >
@@ -90,15 +110,6 @@ export default function CarouselPage() {
                         <img src="lawnPics/Commercial3.png" alt="Residential Property" className='bg-white' height={1000} width={1000} />
                     </Paper>
                 </div>
-
-                {/* <div className="flex justify-center items-center h-full">
-                    <Paper className="border-r ">
-                        <img src="lawnPics/Commercial4.png" alt="Residential Property" className='bg-white' height={1000} width={1000} />
-                    </Paper>
-                    <Paper className="hidden md:block">
-                        <img src="lawnPics/Commercial44.png" alt="Residential Property" className='bg-white' height={1000} width={1000} />
-                    </Paper>
-                </div> */}
 
             </Carousel>
         </>
