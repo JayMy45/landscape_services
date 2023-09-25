@@ -104,7 +104,7 @@ export default function Contact() {
                                     minLength={2}
                                     maxLength={150}
                                     placeholder="Name"
-                                    autoComplete="off"
+                                    autoComplete="on"
                                 />
                             </div>
 
@@ -117,6 +117,7 @@ export default function Contact() {
                                     minLength={7}
                                     maxLength={15}
                                     placeholder="Phone"
+                                    autoComplete="on"
                                 />
                             </div>
 
@@ -129,7 +130,7 @@ export default function Contact() {
                                     type="email"
                                     minLength={5}
                                     maxLength={150}
-                                    autoComplete="off"
+                                    autoComplete="on"
                                     placeholder="Email"
                                 />
                             </div>
@@ -142,6 +143,7 @@ export default function Contact() {
                                     placeholder="Leave a message..."
                                     name="message"
                                     rows="4"
+                                    autoComplete="off"
                                     minLength={10}
                                     maxLength={500}
                                 />

@@ -16,8 +16,12 @@ export default function Home() {
         <title>Jones Landscaping Services</title>
       </Head>
       <div className='flex justify-center bg-stone-500 bg-opacity-50 dark:bg-stone-700 dark:bg-opacity-70 md:rounded-t-lg w-full py-3 px-2'>
-        <Image className="hidden dark:block" src="/JonesLandService4.png" height={200} width={375} alt='Jones Landscaping Services' />
-        <Image className="dark:hidden block" src="/JonesLandService5.png" height={200} width={375} alt='Jones Landscaping Services' />
+        <div className='hidden dark:block'>
+          <Image className="" src="/JonesLandService4.png" height={200} width={375} alt='Jones Landscaping Services' />
+        </div>
+        <div className='dark:hidden block'>
+          <Image className="" src="/JonesLandService5.png" height={200} width={375} alt='Jones Landscaping Services' />
+        </div>
       </div>
       <CarouselPage />
       <div className=' bg-stone-500 bg-opacity-50 dark:bg-stone-700 dark:bg-opacity-70 md:rounded-b-lg  flex flex-col md:flex-row'>

@@ -16,7 +16,8 @@ export default function CarouselPage() {
             // Resume autoplay with a delay (to not interfere immediately with the manual swipe)
             const timer = setTimeout(() => {
                 setAutoPlay(true);
-            }, 1000);
+                console.log('changed autoplay to true')
+            }, 4000);
 
             return () => clearTimeout(timer);  // Cleanup the timer on component unmount or state changes
         }

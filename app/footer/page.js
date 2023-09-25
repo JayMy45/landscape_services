@@ -16,9 +16,9 @@ export default function Footer() {
             <footer className=" bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 pt-2 shadow-md">
 
                 <div className="footer flex h-48">
-                    <div className="w-1/6 flex justify-center items-center ">
+                    <div className="w-1/6 flex justify-center items-center">
                         <Image className="hidden md:block" src="/jlsLOGO.1.png" alt="Business Logo" width={150} height={150} />
-                        <Image className="block md:hidden" src="/jlsLOGO.png" alt="Business Logo with initial" width={50} height={50} />
+                        <Image className="block md:hidden ml-16" src="/jlsLOGO.png" alt="Business Logo with initial" width={50} height={50} />
                     </div>
 
                     <div className="hidden md:block w-4/6 text-center">
