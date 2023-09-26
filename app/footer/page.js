@@ -15,40 +15,43 @@ export default function Footer() {
             </div>
             <footer className=" bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 pt-2 shadow-md">
 
-                <div className="footer flex h-48">
-                    <div className="w-1/6 flex justify-center items-center">
+                <div className="footer flex h-48 px-5 mx-auto">
+
+                    <div className="w-3/12 md:w-3/12 lg:w-2/12 flex justify-center items-center">
                         <Image className="hidden md:block" src="/jlsLOGO.1.png" alt="Business Logo" width={150} height={150} />
-                        <Image className="block md:hidden ml-16" src="/jlsLOGO.png" alt="Business Logo with initial" width={50} height={50} />
+                        <Image className="block md:hidden px-1 mx-auto" src="/jlsLOGO.png" alt="Business Logo with initial" width={75} height={75} />
                     </div>
 
-                    <div className="hidden md:block w-4/6 text-center">
+                    <div className="hidden md:block text-center md:w-6/12 lg:w-8/12">
                         <div className="py-4">
                             <ul className="inline-flex justify-between items-center py-16">
                                 <Link href="/">
-                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 mr-16">Home</li>
+                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">Home</li>
                                 </Link>
                                 <Link href="#about">
-                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 mr-16">About Us</li>
+                                    <li className="hidden md:block hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">About</li>
+                                    <li className="block md:hidden hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">About Us</li>
                                 </Link>
                                 <Link href="#area">
-                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 mr-16">Areas</li>
+                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">Areas</li>
                                 </Link>
                                 <Link href="#services">
-                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 mr-16">Services</li>
+                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">Services</li>
                                 </Link>
                                 <Link href="#contact">
-                                    <li className="hover:border-b border-blue-50 p-1 text-blue-50 mr-16">Contact Us</li>
+                                    <li className="hidden md:block hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">Contact</li>
+                                    <li className="block md:hidden hover:border-b border-blue-50 p-1 text-blue-50 md:mr-5 lg:mr-12">Contact Us</li>
                                 </Link>
                             </ul>
                         </div>
                     </div>
 
-                    <div className="w-5/6 md:w-1/6 text-left">
-                        <ul className="flex flex-col justify-between items-center py-16">
+                    <div className="w-9/12 md:w-3/12 lg:w-3/12 text-left">
+                        <ul className="flex flex-col items-center h-full py-16">
 
-                            <li className="text-sm border-blue-50 p-1 text-blue-50 mr-16">Phone: 803-563-0416</li>
-                            <li className="hover:border-b text-sm border-blue-50 p-1 text-blue-50 mr-16">Email:<span> </span>
-                                <Link href="#contact">
+                            <li className="text-sm md:text-xs xl:text-sm border-blue-50 md:p-1 text-blue-50">Phone: 803-563-0416</li>
+                            <li className="text-sm md:text-xs xl:text-sm border-blue-50 md:p-1 text-blue-50">Email:<span> </span>
+                                <Link href="#contact" className="hover:border-b">
                                     jonesservice85@gmail.com
                                 </Link>
                             </li>
