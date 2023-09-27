@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 py-2 shadow-md">
-                <div className="navbar flex h-24">
+                <div className="navbar flex h-[6.25rem]">
                     <div className="w-1/3 flex justify-center">
                         <ul className="flex justify-around items-center space-x-4">
                             <Link href="/">
@@ -23,7 +23,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="w-1/3 flex justify-center items-center">
-                        <Image src="/jlsLOGO1.png" alt="Business Logo" width={150} height={150} />
+                        <Image src="/jlsLOGO.1.png" alt="Business Logo" width={100} height={100} />
                     </div>
 
                     <div className="w-1/3 flex justify-center">
