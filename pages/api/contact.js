@@ -20,6 +20,11 @@ export default async function ContactAPI(req, res) {
     // store email credentials in user variable from .env file
     const user = process.env.user;
 
+    // Log the values to check them
+    console.log('User:', process.env.user);
+    console.log('Password:', process.env.pass); // Note: This is sensitive, make sure to remove it after checking
+
+
     // create transporter object using nodemailer and gmail credentials (see nodemailer docs for more info)
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
