@@ -28,21 +28,21 @@ export default function Footer() {
                             <div className="py-1 md:py-4 text-xs md:text-sm">
                                 <ul className="inline-flex md:justify-between lg:justify-evenly items-center py-1 md:py-16 md:w-80 lg:w-full">
                                     <Link href="/">
-                                        <li className="hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">Home</li>
+                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Home</li>
                                     </Link>
                                     <Link href="#about">
-                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">About</li>
-                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">About Us</li>
+                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About</li>
+                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About Us</li>
                                     </Link>
                                     <Link href="#area">
-                                        <li className="hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">Areas</li>
+                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Areas</li>
                                     </Link>
                                     <Link href="#services">
-                                        <li className="hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">Services</li>
+                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Services</li>
                                     </Link>
                                     <Link href="#contact" className="hidden md:block">
-                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">Contact</li>
-                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 text-blue-700 md:text-blue-50">Contact Us</li>
+                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact</li>
+                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact Us</li>
                                     </Link>
                                 </ul>
                             </div>
