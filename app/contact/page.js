@@ -180,8 +180,11 @@ export default function Contact() {
                             <div className="flex justify-center mb-7 md:mb-0 md:mt-7">
                                 <button
                                     disabled={loading}
-                                    className="bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit">
-                                    <h2 className="uppercase text-slate-200 text-lg font-bold">Submit</h2>
+                                    className={loading ? "bg-green-700 dark:bg-green-800 bg-opacity-40 dark:bg-opacity-30 rounded-lg py-2 px-7 shadow-2xl w-fit" : "bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit"}>
+                                    {loading
+                                        ? <h2 className="uppercase text-yellow-300 text-xl font-bold">Success!!!</h2>
+                                        : <h2 className="uppercase text-slate-100 text-lg font-bold">Submit</h2>
+                                    }
                                 </button>
                             </div>
                         </div>
