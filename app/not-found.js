@@ -19,7 +19,7 @@ export default function NotFound() {
             <div className='flex justify-center items-center mt-5'>
                 <Image src="/jls_Logos4.png" alt="Business Logo" width={750} height={750} />
             </div>
-            <h2 className='text-center text-xl font-semibold'>request to Not Found</h2>
+            <h2 className='text-center text-xl font-semibold'>request Not Found</h2>
         </div>
     )
 }
