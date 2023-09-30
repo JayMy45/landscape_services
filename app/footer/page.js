@@ -19,7 +19,7 @@ export default function Footer() {
 
                     <div className="w-5/12 md:w-3/12 lg:w-3/12 flex justify-center items-center">
                         <Image className="hidden md:block" src="/jlsLOGO1.png" alt="Business Logo" width={250} height={250} />
-                        <Image className="block md:hidden px-1 mx-auto" src="/jlsLOGO.png" alt="Business Logo with initial" width={75} height={75} />
+                        <Image className="block md:hidden px-1 mx-auto" src="/jlsLOGO.b.png" alt="Business Logo with initial" width={75} height={75} />
                     </div>
 
                     <div className="w-7/12 md:w-9/12 lg:w-9/12 h-1/2 md:h-full flex flex-col md:flex-row">
