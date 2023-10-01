@@ -1,8 +1,40 @@
+import Head from "next/head";
 import { ServiceArea } from "../data/ServiceArea";
+
+// JSON-LD structured data
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': ServiceArea.map((area, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'url': `/area#${area.id}`,
+        'name': area.name,
+        'description': area.description,
+        'image': area.image
+    }))
+};
+
+// SEO Metadata
+export const metadata = {
+    title: 'Areas of Operation | Jones Landscaping Services',
+    description: 'Location where services are offered.',
+    openGraph: {
+        title: 'Areas of Operation | Jones Landscaping Services',
+        description: 'Location where services are offered.',
+    },
+};
 
 export default function AreaPage() {
     return (
         <>
+            <Head>
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            </Head>
+
+
             <section className="h-full p-2 pt-16 md:pb-5 md:px-10 md:pt-28" id="area">
                 <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
                     <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Area of Operation</h2>
