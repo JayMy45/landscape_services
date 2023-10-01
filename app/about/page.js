@@ -1,9 +1,46 @@
-import Link from "next/link";
+import Head from "next/head";
+
+// JSON-LD structured data for About Us page
+const aboutUsJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'name': 'About Us | Jones Landscaping Services',
+    'description': 'A description about Jones Landscaping Services and our mission.',
+    'url': 'https://www.joneslandscapingservice.com',
+    'mainEntity': {
+        '@type': 'Organization',
+        'name': 'Jones Landscaping Services',
+        'description': 'A landscaping service company established in 2018 by TyKeith Jones.',
+        'foundingDate': '2018',
+        'founder': {
+            '@type': 'Person',
+            'name': 'TyKeith Jones'
+        }
+    }
+};
+
+// SEO Metadata
+export const metadata = {
+    title: 'About Us | Jones Landscaping Services',
+    description: 'A description about Jones Landscaping Services and our mission.',
+    openGraph: {
+        title: 'About Us | Jones Landscaping Services',
+        description: 'A description about Jones Landscaping Services and our mission.',
+    },
+};
+
 
 export default function About() {
 
     return (
         <>
+            <Head>
+                {/* Injecting the JSON-LD structured data */}
+                <script type="application/ld+json">
+                    {JSON.stringify(aboutUsJsonLd)}
+                </script>
+            </Head>
+
             <section className="h-full p-2 pt-16 md:pt-28 md:pb-5 md:p-5" id="about">
                 <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
                     <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">About Us</h2>
