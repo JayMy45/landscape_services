@@ -19,6 +19,9 @@ export default function Home() {
         <div className='dark:hidden block'>
           <Image className="" src="/JonesLandService5.png" height={200} width={375} alt='Jones Landscaping Services' />
         </div>
+        <div className='hidden'>
+          <h1>Jones Landscaping Services</h1>
+        </div>
       </div>
       <CarouselPage />
       <div className=' bg-stone-500 bg-opacity-50 dark:bg-stone-700 dark:bg-opacity-70 md:rounded-b-lg  flex flex-col md:flex-row'>
