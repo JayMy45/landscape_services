@@ -1,3 +1,4 @@
+import Head from "next/head";
 
 // JSON-LD structured data for About Us page
 const aboutUsJsonLd = {
