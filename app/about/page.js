@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 
 // JSON-LD structured data for About Us page
 const aboutUsJsonLd = {
