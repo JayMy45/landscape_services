@@ -3,6 +3,16 @@ import HoustonBrand from "../houston"
 import TickerComponent from "./ticker"
 import Link from "next/link"
 
+// SEO Metadata
+export const metadata = {
+    title: 'Footer | Jones Landscaping Services',
+    description: 'Links to route throughout the.',
+    openGraph: {
+        title: 'Footer | Jones Landscaping Services',
+        description: 'This module supports links to route throughout website.',
+    },
+};
+
 export default function Footer() {
 
     return (
