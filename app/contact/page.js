@@ -6,15 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { serviceData } from "../data/serviceData";
 import 'react-toastify/dist/ReactToastify.css';
 
-// SEO Metadata
-export const metadata = {
-    title: 'Contact Page | Jones Landscaping Services',
-    description: 'You can enter your information to email about landscaping services needed.',
-    openGraph: {
-        title: 'Contact Page | Jones Landscaping Services',
-        description: 'You can enter your information to email about landscaping services needed.',
-    },
-};
 
 export default function Contact() {
     // resetCount state to reset checkbox state
