@@ -76,7 +76,7 @@ export default function Footer() {
                                 <h2 className="block md:hidden text-md font-bold border-blue-50 md:p-1 text-blue-50 uppercase"><u>Contact</u></h2>
                                 <h2 className="text-sm xl:text-sm border-blue-50 md:p-1 text-blue-50">803-563-0416</h2>
                                 <h2 className="text-sm xl:text-sm border-blue-50 md:p-1 text-blue-50">
-                                    <Link href="contact" className="hover:border-b">
+                                    <Link href="#contact" className="hover:border-b">
                                         jonesservice85@gmail.com
                                     </Link>
                                 </h2>
