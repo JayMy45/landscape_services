@@ -23,6 +23,8 @@ export default function Footer() {
                     <TickerComponent />
                 </div>
             </div>
+
+            {/* footer div */}
             <footer className=" bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 pt-2 shadow-md">
 
                 <div className="footer flex flex-row h-36 md:h-44 px-5 mx-auto">
