@@ -63,7 +63,7 @@ export default function Footer() {
 
                                 <li className="text-sm md:text-xs xl:text-sm border-blue-50 md:p-1 text-blue-50">Phone: 803-563-0416</li>
                                 <li className="text-sm md:text-xs xl:text-sm border-blue-50 md:p-1 text-blue-50">Email:<span> </span>
-                                    <Link href="contact" className="hover:border-b">
+                                    <Link href="#contact" className="hover:border-b">
                                         jonesservice85@gmail.com
                                     </Link>
                                 </li>
