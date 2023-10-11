@@ -1,19 +1,19 @@
 import Image from 'next/image'
 
-export default function Frame({ photo }) {
+
+export default function Frame({ serviceData }) {
     return (
         <>
             <Image
                 alt=""
-                src={photo.imageSrc}
+                src={serviceData.image}
                 height={600}
                 width={600}
                 className="w-full object-cover aspect-square col-span-2"
             />
 
             <div className="bg-white p-4 px-6">
-                <h3>{photo.name}</h3>
-                <p>Taken by {photo.username}</p>
+                <h3>Hellow THere</h3>
             </div>
         </>
     )
