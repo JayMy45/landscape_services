@@ -10,12 +10,13 @@ export const metadata = {
   description: 'Website for Jones Landscaping Services',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
         {children}
+        {modal}
         <Footer />
       </body>
     </html>

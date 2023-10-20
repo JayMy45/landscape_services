@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineFacebook, AiOutlineInstagram, AiOutlineMenu, AiOutlineTwitter } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 export default function Hamburger() {
@@ -104,8 +105,8 @@ export default function Hamburger() {
                             onClick={() => setNavbarOpen(false)
                             }
                         />
-                        <AiOutlineTwitter
-                            size={30}
+                        <FaXTwitter
+                            size={25}
                             className="cursor-pointer text-slate-200"
                             onClick={() => setNavbarOpen(false)
                             }
