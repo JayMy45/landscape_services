@@ -90,7 +90,7 @@ export default function Footer() {
                 <div className="flex flex-row justify-center md:justify-end py-2 md:py-0">
                     <div className="md:flex md:justify-center md:items-center md:p-0">
                         <a href="http://www.jeremynmyers.com">
-                            <h4 className="text-xxs text-zinc-6000 dark:text-zinc-50 px-2">&copy; 2023 JayMyDesign<span className="text-yellow-500">*</span></h4>
+                            <h4 className="text-xxs text-zinc-6000 dark:text-zinc-50 px-2">&copy; 2023 isJayMyDesign<span className="text-yellow-500">*</span></h4>
                         </a>
                     </div>
                     <HoustonBrand />
