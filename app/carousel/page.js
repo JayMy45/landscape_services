@@ -8,6 +8,8 @@ export default function CarouselPage() {
 
     const [isSwiping, setIsSwiping] = useState(false);
     const [autoPlay, setAutoPlay] = useState(true);
+    const [firstImageLoaded, setFirstImageLoaded] = useState(false);
+    const [secondImageLoaded, setSecondImageLoaded] = useState(false);
 
     useEffect(() => {
         if (isSwiping) {
@@ -22,6 +24,20 @@ export default function CarouselPage() {
             return () => clearTimeout(timer);  // Cleanup the timer on component unmount or state changes
         }
     }, [isSwiping]);
+
+    useEffect(() => {
+        const preloadImage1 = new Image();
+        preloadImage1.src = 'lawnPics/Residential1.png'; // URL of the first image
+        preloadImage1.onload = () => setFirstImageLoaded(true);
+
+        const preloadImage2 = new Image();
+        preloadImage2.src = 'lawnPics/Residential1.png';// You can also add an onload event listener if needed
+        preloadImage2.onload = () => setSecondImageLoaded(true);
+    }, []);
+
+    if (!firstImageLoaded || !secondImageLoaded) {
+        return <div>Loading...</div>; // Or any other placeholder
+    }
 
     return (
         <>
