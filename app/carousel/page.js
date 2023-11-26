@@ -2,6 +2,7 @@
 
 import { Paper } from "@mui/material";
 import { useEffect, useState } from "react";
+import { TailSpin } from 'react-loader-spinner';
 import Carousel from "react-material-ui-carousel";
 
 export default function CarouselPage() {
@@ -36,7 +37,10 @@ export default function CarouselPage() {
     }, []);
 
     if (!firstImageLoaded || !secondImageLoaded) {
-        return <div>Loading...</div>; // Or any other placeholder
+        return <div className="flex justify-center items-center h-96">
+            <h1 className="text-5xl">Loading...</h1>
+            <TailSpin type="TailSpin" color="#00BFFF" height={50} width={50} />
+        </div>;
     }
 
     return (
