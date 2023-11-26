@@ -9,8 +9,7 @@ export default function CarouselPage() {
 
     const [isSwiping, setIsSwiping] = useState(false);
     const [autoPlay, setAutoPlay] = useState(true);
-    const [firstImageLoaded, setFirstImageLoaded] = useState(false);
-    const [secondImageLoaded, setSecondImageLoaded] = useState(false);
+    const [allImagesLoaded, setAllImagesLoaded] = useState(false);
 
     useEffect(() => {
         if (isSwiping) {
@@ -27,23 +26,30 @@ export default function CarouselPage() {
     }, [isSwiping]);
 
     useEffect(() => {
-        // Create a new image object for preloading the first image
-        const preloadImage1 = new Image();
+        let loadedImages = 0; // Counter for loaded images
+        const imageUrls = [
+            'lawnPics/Residential1.png',
+            'lawnPics/Residential1a.png',
+            // ... add all other image URLs you want to preload
+        ];
 
-        // Set the source of the first image
-        preloadImage1.src = 'lawnPics/Residential1.png';
+        // Iterate over each URL in the array
+        imageUrls.forEach(url => {
+            const img = new Image();
+            img.src = url; // Set the source of the image to the current URL
 
-        // Set an onload event handler for the first image
-        // This will be called once the image is fully loaded
-        preloadImage1.onload = () => setFirstImageLoaded(true);
-
-        const preloadImage2 = new Image();
-        preloadImage2.src = 'lawnPics/Residential1.png';
-        preloadImage2.onload = () => setSecondImageLoaded(true);
+            // Define an onload event handler for the image
+            img.onload = () => {
+                loadedImages++; // Increment the counter when an image is loaded
+                if (loadedImages === imageUrls.length) {
+                    setAllImagesLoaded(true); // Set state true when all images are loaded
+                }
+            };
+        });
     }, []);
 
-    if (!firstImageLoaded || !secondImageLoaded) {
-        // Display loading screen if either of the images is not yet loaded
+    if (!allImagesLoaded) {
+        // Show loading indicator until all images are loaded
         return <div className="flex justify-center items-center h-44">
             <h1 className="text-5xl">Loading...</h1>
             <TailSpin type="TailSpin" color="#00BFFF" height={50} width={50} />
