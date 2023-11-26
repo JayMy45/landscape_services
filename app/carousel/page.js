@@ -43,6 +43,7 @@ export default function CarouselPage() {
     }, []);
 
     if (!firstImageLoaded || !secondImageLoaded) {
+        // Display loading screen if either of the images is not yet loaded
         return <div className="flex justify-center items-center h-96">
             <h1 className="text-5xl">Loading...</h1>
             <TailSpin type="TailSpin" color="#00BFFF" height={50} width={50} />
