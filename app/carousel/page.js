@@ -36,75 +36,75 @@ export default function CarouselPage() {
                 onSwipeEnd={() => setIsSwiping(false)}
                 swipe={true}
             >
-                <div className="flex justify-center items-center h-full">
+                <div className="carousel-img-container flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/Residential1a.png" alt="Residential Property 1" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/Residential1a.png" alt="Residential Property 1" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/Residential1.png" alt="Residential Property 1a" className='' height={1000} width={1000} />
+                        <img src="lawnPics/Residential1.png" alt="Residential Property 1a" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="">
-                        <img src="lawnPics/Residential2.png" alt="Residential Property" className='md:border-r' height={1000} width={1000} />
+                        <img src="lawnPics/Residential2.png" alt="Residential Property" className='md:border-r carousel-image' />
                     </Paper>
                     <Paper className=" hidden md:block">
-                        <img src="lawnPics/Residential2a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/Residential2a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/Residential3.png" alt="Residential Property" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/Residential3.png" alt="Residential Property" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/Residential3a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/Residential3a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/resident5.png" alt="Residential Property" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/resident5.png" alt="Residential Property" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/resident5a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/resident5a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/resident6.png" alt="Residential Property" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/resident6.png" alt="Residential Property" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/resident6a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/resident6a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="">
-                        <img src="lawnPics/resident7.png" alt="Residential Property" className='md:border-r' height={1000} width={1000} />
+                        <img src="lawnPics/resident7.png" alt="Residential Property" className='md:border-r carousel-image' />
                     </Paper>
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/resident7a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/resident7a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/Commercial1.png" alt="Residential Property" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/Commercial1.png" alt="Residential Property" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/Commercial1a.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/Commercial1a.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
                 <div className="flex justify-center items-center h-full">
                     <Paper className="hidden md:block">
-                        <img src="lawnPics/Commercial3a.png" alt="Residential Property" className='border-r' height={1000} width={1000} />
+                        <img src="lawnPics/Commercial3a.png" alt="Residential Property" className='border-r carousel-image' />
                     </Paper>
                     <Paper className="">
-                        <img src="lawnPics/Commercial3.png" alt="Residential Property" className='' height={1000} width={1000} />
+                        <img src="lawnPics/Commercial3.png" alt="Residential Property" className='carousel-image' />
                     </Paper>
                 </div>
 
