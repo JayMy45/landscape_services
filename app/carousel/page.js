@@ -27,12 +27,18 @@ export default function CarouselPage() {
     }, [isSwiping]);
 
     useEffect(() => {
+        // Create a new image object for preloading the first image
         const preloadImage1 = new Image();
-        preloadImage1.src = 'lawnPics/Residential1.png'; // URL of the first image
+
+        // Set the source of the first image
+        preloadImage1.src = 'lawnPics/Residential1.png';
+
+        // Set an onload event handler for the first image
+        // This will be called once the image is fully loaded
         preloadImage1.onload = () => setFirstImageLoaded(true);
 
         const preloadImage2 = new Image();
-        preloadImage2.src = 'lawnPics/Residential1.png';// You can also add an onload event listener if needed
+        preloadImage2.src = 'lawnPics/Residential1.png';
         preloadImage2.onload = () => setSecondImageLoaded(true);
     }, []);
 
