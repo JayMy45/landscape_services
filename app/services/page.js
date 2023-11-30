@@ -61,7 +61,7 @@ export default function Services() {
                             serviceData.map(({ id, name, description, image }) => {
                                 return <figure className="flex flex-col w-fit h-fit rounded-md overflow-hidden bg-green-600 dark:bg-green-700 bg-opacity-60 shadow-xl mx-auto pr-1 md:pr-5 md:pb-5" key={`service--${id}`}>
                                     <div className="w-44 md:w-56 h-36 md:h-fit">
-                                        <Link href={`/services/${id}`}>
+                                        <Link href={`/service/${id}`}>
                                             <Image
                                                 src={`${image}`}
                                                 className="ml-3 mt-2"
