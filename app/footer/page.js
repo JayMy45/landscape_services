@@ -41,14 +41,14 @@ export default function Footer() {
                         <div className="h-fit md:h-10 text-center md:ml-10 w-12/12 md:w-8/12">
                             <div className="py-1 md:py-4 text-xs md:text-sm">
                                 <ul className="inline-flex md:justify-between lg:justify-evenly items-center py-1 md:py-16 md:w-80 lg:w-full">
-                                    <li onClick={() => scrollToSection('home-section')} className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Home</li>
-                                    <li onClick={() => scrollToSection('about')} className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About</li>
-                                    <li onClick={() => scrollToSection('about')} className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About Us</li>
-                                    <li onClick={() => scrollToSection('area')} className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Areas</li>
-                                    <li onClick={() => scrollToSection('services')} className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Services</li>
+                                    <li onClick={() => scrollToSection('home-section')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Home</li>
+                                    <li onClick={() => scrollToSection('about')} className="cursor-pointer block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About</li>
+                                    <li onClick={() => scrollToSection('about')} className="cursor-pointer hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About Us</li>
+                                    <li onClick={() => scrollToSection('area')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Areas</li>
+                                    <li onClick={() => scrollToSection('services')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Services</li>
                                     <div className="hidden md:block">
-                                        <li onClick={() => scrollToSection('contact')} className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact</li>
-                                        <li onClick={() => scrollToSection('contact')} className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact Us</li>
+                                        <li onClick={() => scrollToSection('contact')} className="cursor-pointer block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact</li>
+                                        <li onClick={() => scrollToSection('contact')} className="cursor-pointer hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact Us</li>
                                     </div>
                                 </ul>
                             </div>
