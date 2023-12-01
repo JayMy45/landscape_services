@@ -1,6 +1,5 @@
 'use client'
 
-import Link from "next/link";
 import Hamburger from "../hamburger";
 import Image from "next/image";
 
