@@ -1,7 +1,7 @@
 export default function Details() {
     return (
-        <div>
+        <section>
             <h1>Details</h1>
-        </div>
+        </section>
     )
 }

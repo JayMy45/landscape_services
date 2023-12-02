@@ -1,15 +1,26 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import Hamburger from "../hamburger";
 import Image from "next/image";
 
 export default function Navbar() {
 
+    const router = useRouter();
+
+    const isActive = (path) => {
+        return router.pathname === path;
+    };
+
+    const sectionScroll = (sectionId) => {
+        return document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
     const scrollToSection = (sectionId) => {
         if (sectionId === 'home-section') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            sectionScroll(sectionId);
         }
     };
 
