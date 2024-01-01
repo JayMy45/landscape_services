@@ -1,19 +1,24 @@
+'use client'
+
 import Image from "next/image"
 import HoustonBrand from "../houston"
 import TickerComponent from "./ticker"
 import Link from "next/link"
 
-// SEO Metadata
-export const metadata = {
-    title: 'Footer | Jones Landscaping Services',
-    description: 'Links to route throughout the.',
-    openGraph: {
-        title: 'Footer | Jones Landscaping Services',
-        description: 'This module supports links to route throughout website.',
-    },
-};
 
 export default function Footer() {
+
+    const scrollToSection = (sectionId) => {
+        if (sectionId === 'home-section') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const currentYear = new Date().getFullYear(); // Get the current year
+
+
 
     return (
         <>
@@ -39,23 +44,15 @@ export default function Footer() {
                         <div className="h-fit md:h-10 text-center md:ml-10 w-12/12 md:w-8/12">
                             <div className="py-1 md:py-4 text-xs md:text-sm">
                                 <ul className="inline-flex md:justify-between lg:justify-evenly items-center py-1 md:py-16 md:w-80 lg:w-full">
-                                    <Link href="/">
-                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Home</li>
-                                    </Link>
-                                    <Link href="#about">
-                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About</li>
-                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About Us</li>
-                                    </Link>
-                                    <Link href="#area">
-                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Areas</li>
-                                    </Link>
-                                    <Link href="#services">
-                                        <li className="hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Services</li>
-                                    </Link>
-                                    <Link href="#contact" className="hidden md:block">
-                                        <li className="block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact</li>
-                                        <li className="hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact Us</li>
-                                    </Link>
+                                    <li onClick={() => scrollToSection('home-section')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Home</li>
+                                    <li onClick={() => scrollToSection('about')} className="cursor-pointer block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About</li>
+                                    <li onClick={() => scrollToSection('about')} className="cursor-pointer hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">About Us</li>
+                                    <li onClick={() => scrollToSection('area')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Areas</li>
+                                    <li onClick={() => scrollToSection('services')} className="cursor-pointer hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Services</li>
+                                    <div className="hidden md:block">
+                                        <li onClick={() => scrollToSection('contact')} className="cursor-pointer block lg:hidden hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact</li>
+                                        <li onClick={() => scrollToSection('contact')} className="cursor-pointer hidden lg:block hover:border-b border-blue-50 p-1 dark:text-blue-400 text-blue-700 md:text-blue-50">Contact Us</li>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
@@ -90,7 +87,7 @@ export default function Footer() {
                 <div className="flex flex-row justify-center md:justify-end py-2 md:py-0">
                     <div className="md:flex md:justify-center md:items-center md:p-0">
                         <a href="http://www.jeremynmyers.com">
-                            <h4 className="text-xxs text-zinc-6000 dark:text-zinc-50 px-2">&copy; 2023 JayMyDesign<span className="text-yellow-500">*</span></h4>
+                            <h4 className="text-xxs text-zinc-6000 dark:text-zinc-50 px-2">&copy; {currentYear + " "} isJayMyDesign<span className="text-yellow-500">*</span></h4>
                         </a>
                     </div>
                     <HoustonBrand />
