@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Hamburger from "../hamburger";
 import Image from "next/image";
+import TickerComponent from "../ticker/ticker";
 
 export default function Navbar() {
 
@@ -26,6 +27,12 @@ export default function Navbar() {
 
     return (
         <>
+            {/* ticker div */}
+            <div className="h-auto w-full">
+                <div className="bg-transparent dark:bg-black">
+                    <TickerComponent />
+                </div>
+            </div>
             <nav className="relative z-10 sticky top-0 hidden md:block bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 py-2 shadow-md">
                 <div className="navbar flex h-[6.25rem]">
                     <div className="w-1/3 flex justify-center">

@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import HoustonBrand from "../houston"
-import TickerComponent from "./ticker"
 import Link from "next/link"
 
 
@@ -22,12 +21,7 @@ export default function Footer() {
 
     return (
         <>
-            {/* ticker div */}
-            <div className="h-10 w-full">
-                <div className="bg-transparent dark:bg-black">
-                    <TickerComponent />
-                </div>
-            </div>
+
 
             {/* footer div */}
             <footer className=" bg-stone-400 dark:bg-stone-700 bg-opacity-95 dark:bg-opacity-95 pt-2 shadow-md">
