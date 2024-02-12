@@ -7,6 +7,7 @@ import CarouselPage from './carousel/page'
 import { BsCash, BsFillCreditCardFill } from 'react-icons/bs'
 import { SiCashapp } from "react-icons/si"
 import { FaCcVisa } from "react-icons/fa"
+import TickerComponent from './ticker/ticker'
 
 export default function Home() {
 
