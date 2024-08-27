@@ -7,7 +7,6 @@ import CarouselPage from './carousel/page'
 import { BsCash, BsFillCreditCardFill } from 'react-icons/bs'
 import { SiCashapp } from "react-icons/si"
 import { FaCcVisa } from "react-icons/fa"
-import TickerComponent from './ticker/ticker'
 
 export default function Home() {
 
@@ -34,7 +33,7 @@ export default function Home() {
           <div className='h-52 rounded-lg w-44 p-10 bg-zinc-400 dark:bg-zinc-600 px-4 py-1 lg:px-7 lg:py-2 shadow-lg'>
             <h2 className='text-slate-200 text-lg font-semibold pt-2'>Mowing and Trimming</h2>
             <h2 className='text-yellow-200 text-md pt-2'>starts at</h2>
-            <h1 className='text-orange-950 dark:text-yellow-700 text-6xl font-bold pb-2'>$85</h1>
+            <h1 className='text-orange-950 dark:text-yellow-700 text-5xl font-bold pb-2'>$100</h1>
             <h2 className='text-slate-300 text-xs pb-2 italic'>all property sizes</h2>
           </div>
 
